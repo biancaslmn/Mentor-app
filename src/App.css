@@ -1,0 +1,378 @@
+body{
+  background: url("./components/background.png")
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #BDBAB6;
+}
+
+.MuiList-root-216, .MuiList-root-153, .MuiList-padding-154, .MuiMenu-paper-98, .MuiPaper-elevation8-23, .MuiPaper-rounded-14, .MuiPopover-paper-99{
+  background-color: #AA744B!important;
+  color: #BDBAB6!important;
+
+}
+
+.MuiMenuItem-root-157, .MuiMenuItem-root-157{
+  color: #BDBAB6!important;
+}
+
+
+.submit, .signIn{
+background-color: #AA744B;
+border: none;
+color: #BDBAB6;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+position: inherit;
+margin:5px;
+margin-top: 20px;
+cursor:pointer;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.submit:hover, .signIn:hover {
+  background-color: #AA744B; 
+  color: #BDBAB6;
+}
+
+form{
+  background-color: #010413; opacity:0.7;
+  border: 2px solid #010619;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 80px;
+  width: 480px;
+  margin-top: 80px!important;
+  margin: 0 auto;
+}
+
+input{
+  padding: 12px 20px;
+  margin: 8px 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px!important;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+#App {
+  font-family: sans-serif;
+  height: 100vh;
+  
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #BDBAB6;
+  transition: color 0.2s;
+  background-color: #010619;
+}
+
+.bm-item:hover {
+  color: #AA744B;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+.bm-burger-bars {
+  background-color: #010619;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #AA744B;
+}
+
+.bm-menu {
+  background-color: #010619!important;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #AA744B;
+}
+
+.bm-item-list {
+  color: #AA744B!important;
+  background-color: #010619;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+form ,.submit, .signIn, input  {
+    max-width: 80%;
+    margin-top: 10px!important;
+  
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  .chat  {
+    max-width: 100%;
+    height: 100%!important;
+  
+  }
+} 
+
+
+
+.pt-4, .py-4{
+  background-color: #010413;
+}
+
+.App .mt-4, .my-4{
+ margin-top: 5% !important;
+}
+
+.bm-burger-button{
+color: #AA744B;
+}
+ p, a {
+  color: #BDBAB6!important;
+}
+
+.container-fluid, h5 {
+color: #AA744B!important;
+}
+
+#root {
+  height: 100%;
+}
+
+:root {
+  --main-color: #010619;
+  --secondary-color: #BDBAB6;
+  --main-text-color: #010619;
+  --secondary-text-color: #AA744B;
+  --send-message-form: #AA744B;
+}
+
+
+
+.chat {
+  margin-top: 80px!important;
+  margin: 0 auto;
+  width: 750px;
+  background-color: #AA744B;
+  color: #BDBAB6; 
+  height: calc(100% - 100px);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  color: var(--secondary-color);
+  background: var(--main-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.message {
+ 
+  margin: 15px 0;
+}
+
+
+.message div:nth-child(1) {
+  font-size: 11px;
+  color: var(--main-text-color);
+  opacity: 0.9;
+  margin-bottom: 6px;
+  margin-right: 60%;
+}
+.message div:nth-child(2) {
+  background: var(--secondary-color);
+  color:var(--main-text-color);
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-right: 60%;
+}
+
+.message-list {
+  box-sizing: border-box;
+  padding: 0 0 0 6px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+
+}
+
+.send-message-form {
+  background:#BDBAB6;;
+  display: flex;
+  box-sizing: border-box;
+  height: 60px;
+  width: 750px;
+  padding: 35px!important;
+  margin-top: 0!important;
+  
+}
+
+.send-message-form input {
+  width: 100%;
+  padding: 15px 10px;
+  border: none;
+  margin: 0;
+  background:#BDBAB6;;
+  font-weight: 200;
+}
+
+.send-message-form input:focus {
+  outline-width: 0;
+}
+
+.send-message-form input::placeholder {
+  color: black;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.CommentBox {
+  font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
+  line-height: 1.5;
+  color: white;
+  background: #444;
+  padding: 20px;
+}
+
+.callout.secondary {
+  margin-top: 20px;
+  background: #222;
+  color: white;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0 0 50px 0;
+}
+.comment-list > li {
+  margin: 0 0 20px 0;
+  background: #333;
+  padding: 20px;
+}
+
+.comment-user {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.comment-user-avatar-wrap {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.comment-username {
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.on {
+  margin-right: 5px;
+}
+
+.comment-text {
+  background: white;
+  color: #222;
+  padding: 20px;
+}
+.comment-text :last-child {
+  margin: 0;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  transition: 0.3s;
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+strong{
+  color: #AA744B;
+  list-style-type: none;
+}
+
+.img-container {
+  width:450px;
+  background: #BDBAB6;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.content {
+  padding: 2px 16px;
+  background: #010619;
+}
