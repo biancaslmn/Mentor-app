@@ -2,13 +2,23 @@ import React from "react";
 class CommentBox extends React.Component {
     constructor() {
       super();
-      
+ 
+//voter section
+ //y/n type sections
+ //rating scale
+ //change author for yes/no/maybe button
+
+ //put the entire thing in a form
+ //it looks cleaner
+ //try putting comments on the side somehowew,
+//so comments look clean
+
       this.state = {
         showComments: false,
         comments: [
-          {id: 1, author: "landiggity", body: "This is my first comment on this forum so don't be a dick"},
-          {id: 2, author: "scarlett-jo", body: "That's a mighty fine comment you've got there my good looking fellow..."},
-          {id: 3, author: "rosco", body: "What is the meaning of all of this 'React' mumbo-jumbo?"}
+          {id: 1, author: "NO!", body: "Paralegal is grunt work, there is nothing like being a lawyer. It's always worth it"},
+          {id: 2, author: "yes", body: "lotsa debt and invested years otherwise..."},
+          {id: 3, author: "maybe", body: "What is a paralegal?"}
         ]
       };
     }
@@ -26,6 +36,7 @@ class CommentBox extends React.Component {
       return(
         <div className="comment-box">
           <h2>Join the Discussion!</h2>
+          <h4>Topic: Is it Better to stick to being a Paralegal or should I study Law?</h4>
           <CommentForm addComment={this._addComment.bind(this)}/>
           <button id="comment-reveal" onClick={this._handleClick.bind(this)}>
             {buttonText}
@@ -81,7 +92,7 @@ class CommentBox extends React.Component {
       return (
         <form className="comment-form" onSubmit={this._handleSubmit.bind(this)}>
           <div className="comment-form-fields">
-            <input placeholder="Name" required ref={(input) => this._author = input}></input><br />
+            <input placeholder="Title" required ref={(input) => this._author = input}></input><br />
             <textarea placeholder="Comment" rows="4" required ref={(textarea) => this._body = textarea}></textarea>
           </div>
           <div className="comment-form-actions">
