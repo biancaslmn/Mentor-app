@@ -1,5 +1,6 @@
 body{
-  background: url("./components/background.png")
+  background: url("./components/background.png");
+  color: #BDBAB6!important;
 }
 
 .App {
@@ -295,15 +296,19 @@ color: #AA744B!important;
 .CommentBox {
   font-family: "Lato", "Lucida Grande","Lucida Sans Unicode", Tahoma, Sans-Serif;
   line-height: 1.5;
-  color: white;
-  background: #444;
+  color: #BDBAB6;
+  background: #010619;
   padding: 20px;
+}
+
+.comment-form{
+  margin-top: 30px!important;
 }
 
 .callout.secondary {
   margin-top: 20px;
   background: #222;
-  color: white;
+  color: #BDBAB6;
 }
 
 .comment-list {
@@ -348,12 +353,48 @@ color: #AA744B!important;
   margin: 0;
 }
 
+.post-button, #comment-reveal{
+  background-color: #AA744B;
+border: none;
+color: #BDBAB6;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+position: inherit;
+margin:5px;
+margin-top: 20px;
+cursor:pointer;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+textarea{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+h2{
+  margin-top: 50px!important;
+  background-color: #010619;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .card {
   /* Add shadows to create the "card" effect */
   transition: 0.3s;
-  width: 450px;
+  width: 350px;
   margin: 0 auto;
   margin-top: 80px;
+  background-color: transparent!important;
+}
+
+.jedi-card{
+  transition: 0.3s;
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: transparent!important;
 }
 
 strong{
@@ -362,7 +403,7 @@ strong{
 }
 
 .img-container {
-  width:450px;
+  width:350px;
   background: #BDBAB6;
 }
 

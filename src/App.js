@@ -1,8 +1,9 @@
 //import React from "react";
+import SignUp from "./components/SignUp";
 import React, { Component } from "react";
 import LoginForm from "./components/LoginForm";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import Comments from "./components/comments";
+import CommentBox from "./components/comments";
 import NavBar from './components/NavBar';
 import SideBar from './components/sidebar';
 import "./App.css";
@@ -10,23 +11,55 @@ import Footer from "./components/Footer";
 import Chatapp from "./components/chatapp"
 import JediProfile from "./components/JediProfile"
 import PadawanProfile from "./components/PadawanProfile"
+import PrivateRoute from "./PrivateRoute";
+import googlebase from "./components/base";
+import Landing from "./components/Landing"
 
 
 
 
 
 class App extends Component {
+    state = { loading: true, authenticated: false, user: null };
+    componentDidMount(){
+        googlebase.auth().onAuthStateChanged(user => {
+            if (user){
+                this.setState({
+                    authenticated: true,
+                    currentUser: user,
+                    loading: false
+                });
+            } else {  
+                this.setState({
+                    authenticated: false,
+                    currentUser: null,
+                    loading: false
+                }); 
+            }
+        })
+    }
     render(){
+        const { authenticated, loading } = this.state;
+        if (loading) {
+            return <p> loading... </p>;
+        }
         return(
             <div className="App">
             <Router>
                 
                 <div>
-                    <Route path="/" component={NavBar}/>
+                    <PrivateRoute 
+                    exact path= "/Landing" 
+                    component={Landing}
+                    authenticated={authenticated}
+                    />
+                      <Route path="/" component={NavBar}/>
+                    <Route path="/SignUp" component={SignUp}/>
                     <Route path="/login" component={LoginForm}/>
-                    <Route path="/Profile" component={JediProfile}/>
-                    <Route path="/Mentors" component={PadawanProfile}/>
+                    <Route path="/Profile" component={PadawanProfile}/>
+                    <Route path="/Mentors" component={JediProfile}/>
                     <Route path="/inqueries" component={Chatapp}/>
+                    <Route path="/Feed" component={CommentBox}/>
                 </div>
             </Router>
           

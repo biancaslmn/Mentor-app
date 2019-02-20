@@ -1,58 +1,47 @@
 import React, { Component } from "react";
+import googlebase from "./base";
+import { withRouter } from "react-router";
+import * as firebase from "firebase"
 
 class LoginForm extends Component {
-  // Setting the initial values of this.state.username and this.state.password
-  state = {
-    username: "",
-    password: ""
-  };
-
-  // handle any changes to the input fields
-  handleInputChange = event => {
-    // Pull the name and value properties off of the event.target (the element which triggered the event)
-    const { name, value } = event.target;
-
-    // Set the state for the appropriate input field
-    this.setState({
-      [name]: value
-    });
-  };
-  HandleForms = event =>{
-      event.preventDefault();
-      
-  }
-
-  // When the form is submitted, prevent the default event and alert the username and password
-  handleFormSubmit = event => {
+  handleSignUp = async event => {
     event.preventDefault();
-    alert(`Username: ${this.state.username}\nPassword: ${this.state.password}`);
-    this.setState({ username: "", password: "" });
+    const { email, password } = event.target.elements;
+    try {
+      const user = await googlebase
+        .auth()
+        .signInWithEmailAndPassword(email.value, password.value);
+      this.props.history.push("/");
+    } catch (error) {
+      alert(error);
+    }
   };
 
   render() {
+  
     return (
       <form>
         
         <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={this.state.username}
-          onChange={this.handleInputChange}
+          type="email"
+          placeholder="Email"
+          name="email"
+      
+          //onChange={this.handleInputChange}
         />
         <input
           type="password"
           placeholder="Password"
           name="password"
-          value={this.state.password}
-          onChange={this.handleInputChange}
+         
+          //onChange={this.handleInputChange}
         />
-        <button class="submit" onClick={this.handleFormSubmit}>Submit</button>
-        <button class="signIn" onClick={this.HandleForms}>Sign-Up</button>
+        <button type="submit" className="submit" onSubmit={this.handleSignUp}>Submit</button>
+        <button type="submit" className="signIn" onSubmit={this.handleSignUp}>Sign-Up</button>
 
       </form>
     );
   }
 }
 
-export default LoginForm;
+export default withRouter (LoginForm);
