@@ -48,7 +48,7 @@ class chatapp extends React.Component {
     
     sendMessage(text) {
         this.currentUser.sendMessage({
-            text,
+            text: "",
             roomId: "19379243"
         })
     }

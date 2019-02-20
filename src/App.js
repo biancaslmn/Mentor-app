@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Chatapp from "./components/chatapp"
 import JediProfile from "./components/JediProfile"
 import PadawanProfile from "./components/PadawanProfile"
+import CommentBox from "./components/comments";
 
 
 
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route path="/Profile" component={JediProfile}/>
                     <Route path="/Mentors" component={PadawanProfile}/>
                     <Route path="/inqueries" component={Chatapp}/>
+                    <Route path="/Feed" component={CommentBox}/>
                 </div>
             </Router>
           
