@@ -1,7 +1,8 @@
 //import React from "react";
-import SignUp from "./components/SignUp";
+//import SignUp from "./components/SignUp";
 import React, { Component } from "react";
-import LoginForm from "./components/LoginForm";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import CommentBox from "./components/comments";
 import NavBar from './components/NavBar';
@@ -13,7 +14,8 @@ import JediProfile from "./components/JediProfile"
 import PadawanProfile from "./components/PadawanProfile"
 import PrivateRoute from "./PrivateRoute";
 import googlebase from "./components/base";
-import Landing from "./components/Landing"
+import Home from "./components/Home/Home"
+
 
 
 
@@ -49,13 +51,13 @@ class App extends Component {
                 
                 <div>
                     <PrivateRoute 
-                    exact path= "/Landing" 
-                    component={Landing}
+                    exact path= "/Home" 
+                    component={Home}
                     authenticated={authenticated}
                     />
-                      <Route path="/" component={NavBar}/>
+                    <Route path="/" component={NavBar}/>
                     <Route path="/SignUp" component={SignUp}/>
-                    <Route path="/login" component={LoginForm}/>
+                    <Route path="/loginForm" component={Login}/>
                     <Route path="/Profile" component={PadawanProfile}/>
                     <Route path="/Mentors" component={JediProfile}/>
                     <Route path="/inqueries" component={Chatapp}/>
@@ -79,6 +81,9 @@ export default App;
 //import Footer from '../../../MIACOR201807FSF3/20-react/01-Activities/06-Stu_PupsterApp/Solved/src/components/Footer/Footer';
 //import JediProfile from './components/JediProfile';
 //import PadawanProfile from './components/PadawanProfile';
+//import SignUpView from './components/SignUp/SignUpView';
+//import { register } from './serviceWorker';
+
 
 // class App extends Component {
 //   render() {

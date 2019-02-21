@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import googlebase from "./base";
+import firebase from "./base";
 import { withRouter } from "react-router";
-import * as firebase from "firebase"
+//import * as firebase from "firebase"
 
 class LoginForm extends Component {
   handleSignUp = async event => {
     event.preventDefault();
     const { email, password } = event.target.elements;
     try {
-      const user = await googlebase
+      const user = await firebase
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
       this.props.history.push("/");

@@ -5,7 +5,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 export default props => {
   return (
     <Menu customBurgerIcon={ <MenuIcon /> }>
-    <a className="menu-item" href="/login">
+    <a className="menu-item" href="/loginForm">
         Home
       </a>
 

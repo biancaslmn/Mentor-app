@@ -7,7 +7,9 @@ import maleavatar from "./maleavatar.png"
 
 function JediProfile(props) {
   return (
-  <div className="jedi-card">
+  <div className="jedi-Maincard">
+   
+    <div className="jedi-card">
     <div className="img-container">
       <img src={maleavatar} style= {{ width:"60%" }} alt="Avatar" href="/Mentors"/>
     </div>
@@ -24,7 +26,8 @@ function JediProfile(props) {
         </li>
       </ul>
     </div>
-
+    </div>
+    
     <div className="jedi-card">
     <div className="img-container">
       <img src={maleavatar} style= {{ width:"60%" }} alt="Avatar" href="/Mentors"/>

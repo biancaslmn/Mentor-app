@@ -1,9 +1,14 @@
-import React from "react";
-import googlebase from './base';
+// import React from "react";
 
+// const Home = () => {
+//   return (
+//     <h1>Home</h1>
+//   )
+// }
+import React from "react"
 
 // export default Home
-class Landing extends React.Component {
+class Home extends React.Component {
   constructor() {
     super();
     this.state = { user: {} };
@@ -36,4 +41,4 @@ class Landing extends React.Component {
     );
   }
 }
-export default Landing;
+export default Home;

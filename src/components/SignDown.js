@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
-import googlebase from "./base";
-import * as firebase from "firebase"
+import firebase from "./base";
+
 
 
 class SignUpContainer extends Component {
@@ -9,7 +9,7 @@ class SignUpContainer extends Component {
     event.preventDefault();
     const { email, password } = event.target.elements;
     try {
-      const user = await googlebase
+      const user = await firebase
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
       this.props.history.push("/");

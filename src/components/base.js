@@ -1,4 +1,4 @@
-import * as firebase from "firebase"
+import firebase from "firebase"
 
 
 
@@ -12,5 +12,7 @@ const googlebase = firebase.initializeApp({
         messagingSenderId: "648242390281"
     
 });
+
+
 
 export default googlebase;
