@@ -25,10 +25,13 @@ class CommentBox extends React.Component {
       }
       
       return(
+        <div className="comment-card">
         <div className="comment-box">
+
          <h2>Join the Discussion!</h2>
           <CommentForm addComment={this._addComment.bind(this)}/>
-         
+          </div>
+       
           <button id="comment-reveal" onClick={this._handleClick.bind(this)}>
             {buttonText}
           </button>
@@ -38,8 +41,9 @@ class CommentBox extends React.Component {
           </h4>
         
           {commentNodes}
-        
-        </div>  
+       
+       
+        </div> 
       );
     } // end render
     
@@ -113,6 +117,7 @@ class CommentBox extends React.Component {
             <a href="#" className="comment-footer-delete" onClick={this._deleteComment}>Delete Comment</a>
           </div>
         </div>
+        
       );
     }
     _deleteComment() {

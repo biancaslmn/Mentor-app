@@ -9,9 +9,7 @@ export default props => {
         Home
       </a>
 
-      <a className="menu-item" href="/Feed">
-        Feed
-      </a>
+    
       
       <a className="menu-item" href="/Profile">
         Profile
@@ -23,9 +21,7 @@ export default props => {
        Mentors
       </a>
 
-      <a className="menu-item" href="/Inqueries">
-        Inqueries
-      </a>
+      
 
     
     </Menu>

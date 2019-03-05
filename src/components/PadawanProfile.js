@@ -4,7 +4,7 @@ import avatar from "./avatar.png"
 
 function PadawanProfile(props) {
   return (
-  <div className="card">
+  <div className="padawan-card">
     <div className="img-container">
       <img src={avatar} style= {{ width:"60%" }} alt="Avatar" href="/Profile"/>
     </div>

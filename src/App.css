@@ -207,7 +207,7 @@ color: #AA744B!important;
 
 .chat {
   margin-top: 80px!important;
-  margin: 0 auto;
+  margin-left: 5%;
   width: 750px;
   background-color: #AA744B;
   color: #BDBAB6; 
@@ -376,7 +376,6 @@ textarea{
 
 h2{
   margin-top: 50px!important;
-  background-color: #010619;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -385,6 +384,31 @@ h2{
   transition: 0.3s;
   width: 350px;
   margin: 0 auto;
+  margin-top: 80px;
+  background-color: transparent!important;
+}
+
+.comment-card{
+  transition: 0.3s;
+  width: 750px;
+  margin-left: 5%;
+  margin-top: 20px;
+ padding-bottom: 30px;
+  background-color: #010619!important;
+}
+
+.reveal-card{
+  transition: 0.3s;
+  width: 350px;
+  position: right;
+  margin-top: 80px;
+  background-color: transparent!important;
+}
+
+.padawan-card{
+  transition: 0.3s;
+  width: 350px;
+  margin-left:5%;
   margin-top: 80px;
   background-color: transparent!important;
 }
