@@ -11,7 +11,7 @@ class SignUpContainer extends Component {
       const user = await googlebase
         .auth()
         .createUserWithEmailAndPassword(email.value, password.value);
-      this.props.history.push("/");
+      this.props.history.push("/LoginForm");
     } catch (error) {
       alert(error);
     }

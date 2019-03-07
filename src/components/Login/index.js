@@ -11,7 +11,7 @@ class LogInContainer extends Component {
       const user = await googlebase
         .auth()
         .signInWithEmailAndPassword(email.value, password.value);
-      this.props.history.push("/");
+      this.props.history.push("/Feed");
     } catch (error) {
       alert(error);
     }

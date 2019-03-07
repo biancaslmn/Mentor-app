@@ -155,7 +155,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-form ,.submit, .signIn, input  {
+form ,.submit, .signIn, input, .comment-card, .padawan-card  {
     max-width: 80%;
     margin-top: 10px!important;
   
@@ -203,13 +203,16 @@ color: #AA744B!important;
   --send-message-form: #AA744B;
 }
 
-
+.message div:nth-child(2){
+  width: 400px;
+}
 
 .chat {
-  margin-top: 80px!important;
-  margin-left: 5%;
-  width: 750px;
-  background-color: #AA744B;
+  margin-top: 30%!important;
+  margin-bottom: 20%;
+  margin-left: 5.5%;
+  width: 550px;
+  background-color: #010619;
   color: #BDBAB6; 
   height: calc(100% - 100px);
 }
@@ -263,7 +266,7 @@ color: #AA744B!important;
   display: flex;
   box-sizing: border-box;
   height: 60px;
-  width: 750px;
+  width: 550px;
   padding: 35px!important;
   margin-top: 0!important;
   
@@ -390,9 +393,11 @@ h2{
 
 .comment-card{
   transition: 0.3s;
-  width: 750px;
+  float: right;
+  display:table-cell;
+  margin-right: 5%;
   margin-left: 5%;
-  margin-top: 20px;
+  margin-top: 80px;
  padding-bottom: 30px;
   background-color: #010619!important;
 }
@@ -406,14 +411,21 @@ h2{
 }
 
 .padawan-card{
+  position: absolute;
   transition: 0.3s;
   width: 350px;
-  margin-left:5%;
   margin-top: 80px;
   background-color: transparent!important;
 }
 
+.jedi-Maincard{
+  margin-bottom: 60%!important;
+}
+
 .jedi-card{
+
+  float: left;
+  width: 50%!important;
   transition: 0.3s;
   width: 350px;
   margin: 0 auto;
@@ -427,6 +439,7 @@ strong{
 }
 
 .img-container {
+  margin-left: 80px;
   width:350px;
   background: #BDBAB6;
 }
@@ -440,4 +453,6 @@ strong{
 .content {
   padding: 2px 16px;
   background: #010619;
+  width: 350px;
+  margin-left: 80px
 }

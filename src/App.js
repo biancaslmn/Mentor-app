@@ -58,10 +58,10 @@ class App extends Component {
                     <Route path="/" component={NavBar}/>
                     <Route path="/SignUp" component={SignUp}/>
                     <Route path="/loginForm" component={Login}/>
-                    <Route path="/Profile" component={PadawanProfile}/>
-                    <Route path="/Profile" component={CommentBox}/>
+                    <Route path="/Feed" component={PadawanProfile}/>
+                    <Route path="/Feed" component={CommentBox}/>
                     <Route path="/Mentors" component={JediProfile}/>
-                    <Route path="/Profile" component={Chatapp}/>
+                    <Route path="/Feed" component={Chatapp}/>
                    
                 </div>
             </Router>
